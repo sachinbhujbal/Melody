@@ -44,26 +44,6 @@ public class MusicPlayerActivity extends AppCompatActivity {
         songList= (ArrayList<AudioModel>) getIntent().getSerializableExtra("LIST");
 
         setResourcesWithMusic();
-
-//        MusicPlayerActivity.this.runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//                Log.e("error", "run: build----");
-//                if(mediaPlayer!=null){
-//                    seekBar.setProgress(mediaPlayer.getCurrentPosition());
-//                    currentTimeTv.setText(convertToMMSS(mediaPlayer.getCurrentPosition()+""));
-//
-//                    if(mediaPlayer.isPlaying()){
-//                        pausePlay.setImageResource(R.drawable.baseline_pause_circle_outline_24);
-//                        musicIcon.setRotation(x++);
-//                    }else{
-//                        pausePlay.setImageResource(R.drawable.baseline_play_circle_outline_24);
-//                        musicIcon.setRotation(0);
-//                    }
-//                }
-//                new Handler().postDelayed(this,100);
-//            }
-//        });
         MusicPlayerActivity.this.runOnUiThread(new Runnable() {
             @Override
             public void run() {
